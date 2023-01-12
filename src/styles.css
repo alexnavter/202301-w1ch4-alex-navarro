@@ -14,8 +14,15 @@
   --padding-horizontal: 72px;
 }
 
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 h1 {
@@ -24,10 +31,8 @@ h1 {
   font-size: 1.875rem;
 }
 
-
 .top-section {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -54,13 +59,53 @@ h1 {
   text-transform: uppercase;
   font-size: 1.625rem;
   font-weight: 800;
-  border: solid 3px;
-  border-color: var(--color-corporative);
-
   margin-bottom: 30px;
 }
 
 .top-section__view--active:hover {
-  background: #fff;
+  background-color: #fff;
   color: var(--color-corporative);
+  border-color: var(--color-corporative);
+  border: solid 3px;
+}
+
+.main-section {
+  padding-top: 20px;
+  height: 525px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-section__cards :nth-child(1) {
+  min-height: 425px;
+  width: 275px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: transparent;
+}
+
+.first-card {
+  background-image: url(/src/img/01.jpg);
+  border-radius: 20px
+}
+
+.second-card {
+  background-image: url(/src/img/02.jpg);
+  border-radius: 20px;
+}
+
+.third-card {
+  background-image: url(/src/img/03.jpg);
+  border-radius: 20px;
+}
+
+.main-section__cards :nth-child(1):hover {
+  color: #fff;
+  text-shadow: 1px 0 10px #181818;
 }
